@@ -1,0 +1,13 @@
+<% if(User == undefined){ %>
+    <button id = "preset"><a href = "/Account" title = "Account"><img id = 'AvatarImgTR'src = '/Images/avatar.jpg'></a></button><!--ADD LINK TO ACCOUNT PAGE-->
+<% } %>
+<% UD.forEach(UD => { %>
+
+    <% if(UD.username == User){ %>
+        <% if(UD.pfp == 'avatar.jpg'){ %>
+            <button id = "preset"><a href = "/Account" title = "Account"><img id = 'AvatarImgTR'src = '/Images/avatar.jpg'></a></button><!--ADD LINK TO ACCOUNT PAGE-->
+            <% } else {%>
+                <button id = "preset"><a href = "/Account" title = "Account"><img id = 'AvatarImgTR'src = '/BeatsUploaded/<%= UD.pfp %>'></a></button><!--ADD LINK TO ACCOUNT PAGE-->
+                <% } %>
+   <% } %>
+<% }) %>
