@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixerz | HomePage</title>
+    <link rel = "stylesheet" href = "css/HomePage.css">
+    <link rel="icon" href="/Images/SoundMixerzLogoBlue.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class = "HomePage-TABS">
+    <fieldset id = "no-border" class = "tab">
+    <div class = "Vocal-Preset tab">
+        <button id = "non"><a href = "/Presets">Presets</a></button><!--ADD LINK TO VOCAL PRESET PAGE-->
+   
+    </div>
+</fieldset>
+<fieldset id = "no-border" class = "tab">
+    <div class = "Beats tab">
+        <button id = "non"><a href = "/Beats">Beats</a></button><!--ADD LINK TO BEATS PAGE-->
+   
+    </div>
+</fieldset>
+<fieldset id = "no-border" class = "tab">
+    <div class = "Mixing-Music tab">
+        <button id = "non"><a href = "/Music-Mixing">Mixing</a></button><!--ADD LINK TO MUSIC MIXING PAGE-->
+   
+    </div>
+</fieldset>
+
+    
+    <fieldset id = "border" class = "tab">
+        <div class = "Home-Page tab">
+            <button id = "preset"><a href = "/" title = "HomePage"><span>🏠︎</span></a></button><!--ADD LINK TO FIND FEATURESPAGE-->
+        
+        </div>
+        </fieldset>
+
+
+        <fieldset id = "no-border" class = "tab">
+            <div class = "Home-Page tab">
+                <button id = "non"><a href = "/DrumKits" title = "DrumKits"><span>Drum-Kits</span></a></button><!--ADD LINK TO FIND FEATURESPAGE-->
+            
+            </div>
+            </fieldset>
+
+
+        
+        <div class = "Inbox inline right" id = 'Inbox'>
+            <fieldset id = "no-border" class = "FieldInbox inline tab">
+                    <button id = "non" class = 'ButtonI Inbox'><span>&#9993;</span></a></button><!--ADD LINK TO BEATS PAGE-->
+                </fieldset>
+                </div>
+                <%- include("../Partials/NotiNum.ejs") %>
+                <%- include('../Partials/Cartnum.ejs') %>
+        <div class = "Shopping-Cart inline">
+            <fieldset id = "no-border" class = "inline tab">
+                    <button id = "non"><a href = "/shopping-cart"><span>🛒 </span></a></button><!--ADD LINK TO BEATS PAGE-->
+                </fieldset>
+                </div>
+     
+
+<div class = "account inline">
+        <fieldset id = "no-border" class = "tab">
+          <%-include('../Partials/PfpAcc.ejs') %>
+           
+          
+        </fieldset>
+    </div>
+        
+</div>
+
+
+
+    <div class = "welcome-screen">
+        <%- include("../Partials/MailBox.ejs") %>
+        <%- include('../Partials/NotLogged.ejs')%>
+       <div class = "backgroundimg">
+        <img src = "Images/Use For SoundMixerz Homepage 1.jpeg">
+        <div class = "overlay-text">
+            <h1>SoundMixerz</h1>
+    <p id = "img-text"><strong>Where you can buy good quality, <br>Presets,<br> Beats, <br>DrumKits,<br> and Mix Music, <br> Easily for an affordable price</strong></p>
+</div>
+</div>
+    <br id="About-us">
+
+
+    <div id = "news">
+        <div class = 'NewsHeader'>
+            <h2>News & Updates</h2>
+        </div>
+        <div class = 'news' id = 'newspage1'><!--NEWS PAGE 1-->
+            <div class = "backgroundimgnews">
+                <div class = 'flexContainer'>
+                    <img src = 'Images/black screen.jpg'>
+                </div>
+            
+                <div class = "overlay-text">
+            <p id = "NewsPage4txt"><strong>SoundMixerz Audio Plugins</strong></p>
+            <p id = "NewsPage4txt"><strong>Coming Soon!</strong></p>
+
+        </div>
+        <div class = 'overlayArrows'>
+            <button class = 'arrows Aleft hide'> < </button><button class = 'arrows Aright' id = 'next1' > > </button>
+        </div>
+        </div>
+        </div>
+
+        <div class = 'news hide' id = 'newspage2'><!--NEWS PAGE 2-->
+            <div class = "backgroundimgnews">
+                <div class = 'flexContainer'>
+                    <img src = 'Images/black screen.jpg'>
+                </div>
+            
+                <div class = "overlay-text">
+            <p id = "NewsPage4txt"><strong>Sample Packs Coming Soon...</strong></p>
+        </div>
+        <div class = 'overlayArrows'>
+            <button class = 'arrows Aleft' id = 'back1'> < </button><button class = 'arrows Aright' id = 'next2'> > </button>
+        </div>
+        </div>
+</div>
+
+        <div class = 'news hide' id = 'newspage3'><!--NEWS PAGE 3-->
+            <div class = "backgroundimgnews">
+                <div class = 'flexContainer'>
+                    <img src = 'Images/black screen.jpg'>
+                </div>
+                <div class = "overlay-text">
+                    <p id = "NewsPage4txt"><strong>Join Our Discord!</strong></p>
+                    <p><strong>You can Promote your SoundMixerz Beats</strong></p>
+                    <p><strong>and</strong></p>
+                    <p><strong>Meet Other Producers/Artists in our Amazing Community!</strong></p>
+                    <p><strong><a href = 'https://discord.gg/t6wcFZdX'>Click Here</a> To Join Today!</strong></p>
+
+                </div>
+                <div class = 'overlayArrows'>
+            <button class = 'arrows Aleft' id = 'back2'> < </button><button class = 'arrows Aright' id = 'next3'> > </button>
+                </div>
+        </div>
+        </div>
+
+        <div class = 'news hide' id = 'newspage4'><!--NEWS PAGE 4-->
+            <div class = "backgroundimgnews">
+                <div class = 'flexContainer'>
+                <img src = "Images/Homepage pointing pic.jpg" class = 'BeatSellhalf'>
+                <img src = 'Images/Pointing in Beat Sec.jpg' class = 'BeatSellhalf'>
+            </div>
+                <div class = "overlay-text">
+            <p id = "NewsPage4txt"><strong>Try Selling Your Own Beat Today!</strong></p>
+        </div>
+        <div class = 'overlayArrows'>
+            <button class = 'arrows Aleft' id = 'back3'> < </button><button class = 'arrows Aright' id = 'next4'> > </button>
+        </div>
+        </div>
+       
+            
+            
+        </div>
+
+        <div class = 'news hide' id = 'newspage5'><!--NEWS PAGE 5-->
+            <div class = "backgroundimgnews">
+                <div class = 'flexContainer'>
+                    <img src = 'Images/black screen.jpg'>
+                </div>
+            
+                <div class = "overlay-text">
+            <p id = "NewsPage4txt"><strong>Any Suggestions For SoundMixerz?</strong></p>
+            <a href = 'mailto:soundmixerzzz@gmail.com'>Contact us!</a>
+        </div>
+        <div class = 'overlayArrows'>
+            <button class = 'arrows Aleft' id = 'Aleft5'> < </button><button class = 'arrows Aright hide'> > </button>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <br>
+    <br>
+    <div class = "flexContainer Spacingtop" id = 'AU'>
+    <div class = "img-holder">
+    <img src = "Images/Use For SoundMixerz HomePage 2 updated.jpg">
+</div>
+    <div class = "about-us">
+    <h2 id="heading1">About us</h2>
+
+    <p>Welcome to SoundMixerz, We are a place where you can easily buy good quality Presets, Sell your own Beats and even have your Music Mixed for you at an affordable Price </p>
+    <p></p>
+</div>
+</div>
+    <br>
+    <br>
+    <div class = "flexContainer Spacingtop" id = 'WCU'>
+    <div class = "WhyChooseUs">
+        <h2 id="heading2">Why Choose us?</h2>
+        <p>We make buying Vocal Presets and Beats easy. We accept many different payment options and we don't require you to enter any unneccassry info. Unlike other online shops that sell Vocal Presets and Beats, We sell Vocal Presets and Beats at an affordable price and at a good quality as well. Unlike other online Music Shops we also allow the usere to make their own money selling their own beats and you can even get your music mixed for you at an amazing quality with an affordable price</p>
+        
+    </div>
+    <div class = "img-holder2">
+        <img src = "Images/Use For SoundMixerz HomePage 3.jpg">
+</div>
+</div>
+<div class = 'FAQ' id = 'FAQ'>
+
+    <div class = 'FQHEADER'>
+        <h2 id = 'FAQHead'>FAQ:</h2>
+    </div>
+
+    <div id = 'FAQquestions' class = 'FAQquestions'>
+        <fieldset id = 'FAQfield'>
+
+            <div class = 'FAQques flexContainer'>
+               
+            <h3 class = 'FAQtxtHeader inline'>How can I sell my beat?</h3>
+            <button class = 'NormBaCo' id = 'showFAQ1'onclick = 'ShowFAQ1()'>
+            <span class = 'SeeMoreOFAQ'>V</span>
+        </button>
+        </div>
+        <div id = 'FirstQuesAns' class = 'ansCon aligner'>
+            <p>You can sell your beat onto SoundMixerz by going to the beat tab</p>
+            <p>on top of the SoundMixerz Website and then click the yellow "Sell Beat" Button</p>
+            <p>Then just fill out the "Beat Selling Form" and your beat will be</p>
+            <p>instantly put onto SoundMixerz.com</p>
+            <br>
+            <p>If you need Further Assistance then Watch the Video Below</p>
+            <p>It is a direct guide on how to sell your beat onto SoundMixerz</p>
+            <br>
+            <video width="640" height="360" controls controlslist="nodownload" >
+                <source src="/Images/Screen Recording 2024-07-23 210025.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class = 'FAQques flexContainer'>
+           
+            <h3 class = 'FAQtxtHeader inline'>Is my Info secure on SoundMixerz?</h3>
+            <button class = 'NormBaCo' id = 'showFAQ2'onclick = 'ShowFAQ2()'>
+            <span class = 'SeeMoreOFAQ'>V</span>
+        </button>
+
+    </div>
+    <div id = 'SecondQuesAns' class = 'ansCon aligner'>
+        <p>Your Info is completely secure on SoundMixerz, We don't and won't ever give</p>
+        <p>Your data to anyone or any third party, At SoundMixerz we value your peace of mind and security</p>
+        <br>
+        <p>When purchasing items we only ask for required information other than that we won't require any additional information</p>
+      
+      
+    </div>
+            <div class = 'FAQques flexContainer'>
+          
+
+                <h3 class = 'FAQtxtHeader inline'>How do I download the Beat I just Bought on SoundMixerz?</h3>
+                <button class = 'NormBaCo' id = 'showFAQ3'onclick = 'ShowFAQ3()'>
+            <span class = 'SeeMoreOFAQ'>V</span>
+            </button>
+
+                </div>
+                <div id = 'ThirdQuesAns' class = 'ansCon aligner'>
+                    <p>To Download the beat you have just Purchased on SoundMixerz,</p>
+                    <p>Go to your account page and then go to the Purchases tab</p>
+                    <p>Then once you click on the purchases tab the beat should be there for you to download</p>
+                    <p>If you are encountering any issues with this please reach out to SoundMixerzzz@gmail.com</p>
+                    <br>
+                    <p>If you need further assistance with this then please watch the video below</p>
+                    <br>
+                    <video width="640" height="360" controls controlslist="nodownload" >
+                        <source src="/Images/How to Download Beat.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class = 'FAQques flexContainer'>
+            
+
+                    <h3 class = 'FAQtxtHeader inline'>How much does it cost to sell my Beat onto SoundMixerz?</h3>
+                    <button class = 'NormBaCo' id = 'showFAQ4'onclick = 'ShowFAQ4()'>
+            <span class = 'SeeMoreOFAQ'>V</span>
+            </button>
+
+                    </div>
+                    <div id = 'FourthQuesAns' class = 'ansCon aligner'>
+                        <p><strong>It costs exactly $0.00 to sell your beat onto SoundMixerz!</strong></p>
+                        <p>Thats right! You can completely make money for free by doing what you love</p>
+                        <br>
+                        <p>Every person that makes an account onto SoundMixerz Automatically has the <strong>"Free Package"</strong></p>
+                        <p>With the free package you can upload up to 3 beats a day and for completely free</p>
+                        <p>But SoundMixerz will take a 15% cut of all sales on your beats</p>
+                        <br>
+                        <p>If that doesn't suit you then you should buy the <strong>"Basic Seller's Package"</strong></p>
+                        <p>With the Basic Sellers Package you can sell 10 Beats a day and SoundMixerz will </p>
+                        <p>Have a 0% cut on all your sales on your beats</p>
+                        <br>
+                        <p>If the Basic Package isn't for you though there is also the <strong>"Pro Seller's Package"</strong></p>
+                        <p>With the Pro Seller's Package you can sell UNLIMITED BEATS per day and you will also get 100% of the Profits</p>
+                        
+                       
+                      
+                    </div>
+
+                    <div class = 'FAQques flexContainer'>
+            
+
+                        <h3 class = 'FAQtxtHeader inline'>How long does it take for my Music to get Mixed?/How much does it cost?</h3>
+            <button class = 'NormBaCo' id = 'showFAQ5'onclick = 'ShowFAQ5()'>
+
+            <span class = 'SeeMoreOFAQ'>V</span>
+            </button>
+
+                        </div>
+                        <div id = 'FifthQuesAns' class = 'ansCon aligner'>
+                            <p>The cost of your Music Mixing is dependent on what package you choose</p>
+                            <p>Your Music to be Mixed with</p>
+                            <br>
+                            <p>There are <strong>Two</strong> Packages to choose from</p>
+                            <p>The <strong>Essentials Package</strong> and the <strong>Pro Package</strong></p>
+                            <p>The <strong>Essentials Package costs $10.00</strong> and The <strong>Pro Package costs $25.00</strong></p>
+                            <br>
+                            <p>The Shipping speed of your mixed music is also dependent on the package you choose</p>
+                            <p>the <strong>Essentials Package mixes music within 3 days</strong> While the <strong>Pro Package mixes music within 1 day</strong></p>
+                           
+                          
+                        </div>
+        </fieldset>
+    </div>
+</div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 id="heading3">Contact</h2>
+    <p>If you encounter an issue with the website or your payment you can contact <a href = "mailto:soundmixerzzz@gmail.com"><strong>soundmixerzzz@gmail.com</strong></a> to resolve the issue</p>
+</div>
+
+    
+<%- include('../Partials/footer.ejs') %>
+   
+</body>
+</html>
+
+    <script src = "js/HomePage.js"></script>
+</body>
+</html>
