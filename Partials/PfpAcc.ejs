@@ -1,0 +1,19 @@
+
+<% if(User == undefined){ %>
+    <button id = "non"><a href = "/Account" title = "Account"><img id = 'AvatarImgTR'src = '/Images/avatar.jpg'></a></button><!--ADD LINK TO ACCOUNT PAGE-->
+<% } %>
+
+
+
+<% UD.forEach(UD => { %>
+
+    <% if(UD.username == User){ %>
+        <% if(UD.pfp == 'avatar.jpg'){ %>
+            <button id = "non"><a href = "/Account" title = "Account"><img id = 'AvatarImgTR'src = '/Images/avatar.jpg'></a></button><!--ADD LINK TO ACCOUNT PAGE-->
+            <% } else {%>
+                <button id = "non"><a href = "/Account" title = "Account"><img id = 'AvatarImgTR'src = '<%= PFPurl %>'></a></button><!--ADD LINK TO ACCOUNT PAGE-->
+                <% } %>
+   <% } %>
+<% }) %>
+
+            

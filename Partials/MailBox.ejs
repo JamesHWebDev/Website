@@ -1,0 +1,28 @@
+<div class = 'mailbox hide aligner' id = 'mailbox'>
+    <% var x = 0 %>
+    <% var y = Noti.length%>
+    <% var newNotification = 0 %>
+    <% if(User == undefined) { %>
+       
+        <fieldset id = 'fieldsetNOTI'>
+        <p class>Please Log In to view your Notifications</p>
+        </fieldset>
+        
+        <% } else { %>
+        <% Noti.forEach(Noti => { %>
+            <% x++ %>
+            <% if(User == Noti.SellUser) { %>
+                <% newNotification++ %>
+                <fieldset id = 'fieldsetNOTI'>
+    <p><a class = 'ViewNoti' data-doc=<%= Noti._id%>><%= Noti.CurrUser %> Just Purchased Your Beat "<%= Noti.NameBeat %>" for $<%= Noti.pobBeat.toFixed(2)%></a></p>
+        </fieldset>
+            <% } %>
+            <% }) %>
+        <% if(x == y && newNotification == 0) {%>
+            <fieldset id = 'fieldsetNOTI'>
+                <p>You Have No New Notifications...</p>
+                    </fieldset>
+            <% } %>
+
+            <% } %>
+</div>
