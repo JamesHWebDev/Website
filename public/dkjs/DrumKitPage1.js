@@ -9,7 +9,34 @@ const rate4 = document.getElementById("star4")
 const rate5 = document.getElementById("star5")
 
 const RatingNumber = document.getElementById('rating')
+document.querySelector('.homepagefield').addEventListener('mouseover', () => {
 
+    document.getElementById('homeIcon').src = '/Images/Home Icon Black.jpg'
+
+
+})
+
+
+document.querySelector('.homepagefield').addEventListener('mouseout', () => {
+
+    document.getElementById('homeIcon').src = '/Images/Home Icon White.jpg'
+
+
+})
+document.querySelector('.shopcartfield').addEventListener('mouseover', () => {
+
+    document.getElementById('cartIcon').src = '/Images/ShopCart White.jpg'
+
+
+})
+
+
+document.querySelector('.shopcartfield').addEventListener('mouseout', () => {
+
+    document.getElementById('cartIcon').src = '/Images/ShopCart Blue.jpg'
+
+
+})
 window.onload = function(){
     document.getElementById('PriceInp').value = 20
     document.getElementById('VocalPresetAdded').textContent = 'SoundMixerz DrumKit 1'
