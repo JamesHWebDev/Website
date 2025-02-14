@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixerz | Account</title>
+    <link rel = "stylesheet" href = "/css/Purchases.css">
+    <link rel="icon" href="/Images/SoundMixerzLogoBlue.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('../Partials/AccountTabs.ejs') %>
+    <div class = "products">
+        <%- include("../Partials/MailBox.ejs") %>
+        <%- include('../Partials/NotLogged.ejs')%>
+        
+        <div class = "flexContainer">
+        
+            <%- include('../Partials/AccTabs.ejs') %>
+   
+
+        
+        <div id = "Boughtclick" class = "Boughtclick">
+            <fieldset class = "not">
+            <h2>Purchases</h2>
+        </fieldset>
+        <div id = 'Con'>
+            <% var x = 0%>
+            <% var sblen = SB.length%>
+            <% var y = 0%>
+            <% var w = -1 %>
+            <% var t = -1 %>
+            <% var f = -1 %>
+            <% var u = -1 %>
+        <% SB.forEach(SB => { %>
+            <% y++%>
+          
+            <% var bt = SB.createdAt%>
+
+          
+        
+            <% if(SB.UserCurr == User) {%>
+                <% x++%>
+                <% if(SB.bomm == 1){ %>
+            <% f++%>
+
+                    <% console.log('BOMM DEFINED') %>
+                
+            <fieldset class = 'PurchasedBeatCon aligner' id = 'fieldset-<%= x%>'>
+                <p>You Purchased the Beat <strong>"<%= SB.BeatName%>"</strong></p>
+                <p>Click the Download Button below to get the Audio File </p>
+                <p>Enjoy!</p>
+                <% let g = -1 %>
+                <% thefiles.forEach(thefiles => { %>
+                    <% g++ %>
+                    <% if(thefiles == SB.NameFile){ %>
+                        <a href="<%= urls[g]%>" id = 'BTItem_<%= f %>' class = 'delete'data-file = '<%= SB._id%>'download="<%= SB.NameFile%>">
+                        <% } %>
+               <% }) %>
+                
+                    <button id = 'download'>Download</button>
+                  </a>
+                
+            </fieldset>
+            <% } else if(SB.bomm == 2) {%>
+                <% w++ %>
+                <fieldset class = 'PurchasedBeatCon aligner' id = 'fieldset-<%= x%>'>
+                    <p>Your Music has been Mixed!</p>
+                    <p>Download the now Mixed Music and Enjoy!</p>
+                    <% let r = -1 %>
+                <% thefiles.forEach(thefiles => { %>
+                    <% r++ %>
+                    <% if(thefiles == SB.NameFile){ %>
+                        <a href="<%= urls[r]%>" id = 'MMItem_<%= w %>' class = 'MMdown'data-file = '<%= SB._id%>'download="<%= SB.NameFile%>">
+                        <% } %>
+               <% }) %>
+                    
+                        <button id = 'download'>Download</button>
+                      </a>
+                    </fieldset>
+                <% } else if(SB.bomm == 3) { %>
+                <% t++ %>
+
+                    <fieldset class = 'PurchasedBeatCon aligner' id = 'fieldset-<%= x%>'>
+                        <p>Your Vocal Preset!</p>
+                        <p>Click the Download Button below to get the Audio File</p>
+                        <% console.log(SB.NameFile) %>
+                        <a href="<%= SB.NameFile%>" id = 'VPItem_<%= t %>' class = 'VPdown'data-file = '<%= SB._id%>'download="<%= SB.NameFile%>">
+                            <button id = 'download'>Download</button>
+                          </a>
+                        </fieldset>
+              <% }  else if(SB.bomm == 4) { %>
+                <% u++ %>
+
+                    <fieldset class = 'PurchasedBeatCon aligner' id = 'fieldset-<%= x%>'>
+                        <p>Your SoundMixerz Drum Kit!</p>
+                        <p>Click the Download Button below to get the Audio File</p>
+                        <% console.log(SB.NameFile) %>
+                        <a href="<%= SB.NameFile%>" id = 'DKItem_<%= u %>' class = 'DKdown'data-file = '<%= SB._id%>'download="<%= SB.NameFile%>">
+                            <button id = 'download'>Download</button>
+                          </a>
+                        </fieldset>
+              <% } %>
+            <% } else if(y == sblen && x == 0){%>
+                <fieldset class = 'PurchasedBeatCon aligner'>
+                    <h3>Anything You Purchase on SoundMixerz Will Show up Here to Download</h3>
+                    <h3>If Your Looking to Purchase any Vocal Presets, Beats, Music Mixings or DrumKits</h3>
+                    <h3>Then Click Any of The Buttons Below!</h3>
+                    <br>
+                    <div class = 'flexContainer'>
+                    <div class = 'divone'>
+                    <a href = '/Presets'>
+                        <button id = 'Beats'>Vocal Presets</button>
+    
+                        </a>
+                    <a href = '/beats' class = 'TabsButts'>
+                    <button id = 'Beats'>Beats</button>
+                    </a>
+                    </div>
+                    <div class = 'divtwo'>
+
+                    
+                    
+                    <a href = '/Music-Mixing'>
+                    <button id = 'Beats'>Music Mixing</button>
+
+                    </a>
+                    <a href = '/DrumKits'>
+                        <button id = 'Beats'>DrumKits</button>
+    
+                        </a>
+                        </div>
+                        </div>
+                    </fieldset>
+                <% } %>
+           
+                <% }) %>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+        </div>
+
+    </div>
+    
+        <script src = "/js/Purchases.js"></script>
+
+
+</body>
+</html>

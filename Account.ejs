@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixerz | Account</title>
+    <link rel = "stylesheet" href = "css/account.css">
+    <link rel="icon" href="/Images/SoundMixerzLogoBlue.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('../Partials/AccountTabs.ejs') %>
+    <div class = "products">
+        <%- include("../Partials/MailBox.ejs") %>
+        <%- include('../Partials/NotLogged.ejs')%>
+        
+        <div class = "flexContainer">
+        
+            <%- include('../Partials/AccTabs.ejs') %>
+   
+
+        
+        <div id = "accountclick" class = "accountclick">
+            <fieldset class = "not">
+            <h2>Account</h2>
+        </fieldset>
+        <br>
+        <div id = 'VerifyEmailCon'>
+            <div class = 'aligner' id = 'RightCode'>
+                <p id = 'VeryText'></p>
+            </div>
+            <div class = 'aligner' id = 'WrongCode'>
+                <p id = 'WrongText'></p>
+            </div>
+            <div class = 'aligner'>
+                <fieldset class = 'lightfield'>
+                <h2>A Verification Code Has Been Sent to Your Email</h2>
+                <h3>This code will expire in 30 minutes</h3>
+            </fieldset>
+            <div id = 'NumsEntered' class = 'flexContainer'>
+                <fieldset class = 'NumBorder'>
+                    <p class = 'NumbersE'></p>
+                </fieldset>
+
+
+                <fieldset class = 'NumBorder'>
+                    <p class = 'NumbersE'></p>
+
+                </fieldset>
+
+
+
+                <fieldset class = 'NumBorder'>
+                    <p class = 'NumbersE'></p>
+
+                </fieldset>
+
+
+
+                <fieldset class = 'NumBorder'>
+                    <p class = 'NumbersE'></p>
+
+                </fieldset>
+
+
+
+                <fieldset class = 'NumBorder'>
+                    <p class = 'NumbersE'></p>
+
+                </fieldset>
+
+
+
+                <fieldset class = 'NumBorder'>
+                    <p class = 'NumbersE'></p>
+
+                </fieldset>
+            </div>
+            <div id = 'NumButtons'>
+                <div class = 'ButtonNumSect'>
+                <button class = 'ButtonNum'>1</button>
+                <button class = 'ButtonNum'>2</button>
+                <button class = 'ButtonNum'>3</button>
+            </div>
+            <div class = 'ButtonNumSect'>
+
+                <button class = 'ButtonNum'>4</button>
+                <button class = 'ButtonNum'>5</button>
+                <button class = 'ButtonNum'>6</button>
+                </div>
+                <div class = 'ButtonNumSect'>
+
+                <button class = 'ButtonNum'>7</button>
+                <button class = 'ButtonNum'>8</button>
+                <button class = 'ButtonNum'>9</button>
+                </div>
+                <div class = 'ButtonNumSect'>
+
+                <button class = 'ButtonNum'>0</button>
+                </div>
+            </div>
+            <div id = 'resendCon'>
+                <button id = 'resendButt'>resend code</button>
+            </div>
+            </div>
+        </div>
+        
+        <div class = "tags flexContainer">
+            <div class = 'UserInf'>
+          
+            
+            
+            <div class = 'AccSect'>
+            <span><strong>Username: </strong></span>
+            <br>
+            <span id = "usernametag"><%= username %></span>
+        </div>
+            <br>
+                <br>
+                <% if(verified !== 'true'){ %>
+
+                    <button id = 'VerifyButton'>
+                <div id = 'EmailSect' class = 'AccSect'>
+                    <span id = 'VeryTxt'>Verify Email Address!</span>
+                    <br>
+            <span><strong>Email: </strong></span>
+            <br>
+            <span id = "emailtag"><%= email %></span>
+        </div>
+        </button>
+        <% } else{ %>
+            <div  class = 'AccSect'>
+            <span><strong>Email: </strong></span>
+            <br>
+            <span id = "emailtag"><%= email %></span>
+            </div>
+            <% } %>
+
+            <br>
+            <br>
+            <div class = 'AccSect'>
+
+            <span><strong>Birthdate: </strong></span>
+            <br>
+            <span id = "monthtag"><%= month %> /</span>
+            <span id = "daytag"><%= day %> /</span>
+            <span id = "yeartag"><%= year %></span>
+            </div>
+            <br>
+            <br>
+            <div class = 'AccSect'>
+
+            <span><strong>Membership: </strong></span>
+            <br>
+            <div class = 'flexContainer'>
+            <% if(package == 'Pro'){ %>
+                <img id = 'Badge' src = '/Images/ProBadge.jpg'>
+                <% } %>
+                <% if(package == 'Basic'){ %>
+                    <img id = 'Badge' src = '/Images/BasicBadge.jpg'>
+                    <% } %>
+            <span id = 'packageType'><%= package %> Package</span>
+                </div>
+        </div>
+        </div>
+           
+                <div class = 'ProfPicDiv aligner'>
+                <span><strong>Profile Picture:</strong></span>
+                <% if(UDs.pfp == 'avatar.jpg'){ %>
+    
+                    <img src = '/Images/<%= UDs.pfp %>' id = 'ProfPic'>
+    
+                    <% }  else {%>
+    
+                        <img src = '<%= url%>' id = 'ProfPic'>
+    
+                        <% } %>
+                        
+                        <br>
+                        <p>Change Profile Picture</p>
+                <form id = 'myForm'  enctype="multipart/form-data" >
+                    <input type = "file" accept = "image/*" name = 'pfp' id = "CurrSrc" required>
+                    <br>
+                    <br>
+                    <button id = 'subform' data-doc = '<%= UDs._id %>'>Update Profile Picture</button>
+                    <input type = 'text' value = '<%= username %>' name = 'userp' id = 'userp' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= email %>' name = 'emailp' id = 'emailp' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= month %>' name = 'monthp' id = 'monthp' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= day %>' name = 'dayp' id = 'dayp' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= year %>' name = 'yearp' id = 'yearp' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= UDs.NewPass %>' name = 'NewPass' id = 'wjiodhiefuijodwkp' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= UDs.package %>' name = 'package' id = 'package' class = 'hiddeninp'>
+                    <input type = 'text' value = '<%= verified %>' name = 'verified' id = 'verified' class = 'hiddeninp'>
+    
+                </form>
+                    </div>
+                    </div>
+
+       
+        </div>
+    </div>
+        </div>
+        
+        </div>
+
+    </div>
+    
+        <script src = "js/account.js"></script>
+
+
+</body>
+</html>
