@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixerz | PaymentHistory</title>
+    <link rel = "stylesheet" href = "/css/PaymentHistory.css">
+    <link rel="icon" href="/Images/SoundMixerzLogoBlue.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <%- include('../Partials/AccountTabs.ejs') %>
+    <div class = "products">
+        <%- include("../Partials/MailBox.ejs") %>
+        <%- include('../Partials/NotLogged.ejs')%>
+        
+        <div class = "flexContainer">
+        
+            <%- include('../Partials/AccTabs.ejs') %>
+
+        <div id = "paymentclick" class = "paymentclick flexContainer">
+            <fieldset class = "not">
+                <h2>Payment History</h2>
+            </fieldset>
+
+            <div class = "payments">
+                    <div id = 'PaymentsCon'>
+                        <% var x = 0%>
+                        <% var y = 0%>
+                        <% var w = 0%>
+                        <% var u = 0 %>
+                        <% var f = 0 %>
+                        <% var BODlen = BeatOD.length %>
+                        <% var mmlen = MusicMixing.length%>
+                        <% var sblen = SB.length%>
+                        <% var bvplen = BoughtVP.length%>
+                        <% var BDKlen = BDK.len %>
+
+                    
+                    <% MusicMixing.forEach(MusicMixing => { %>
+                        <% if(MusicMixing.user == User) {%>
+                        <% var mm = MusicMixing.createdAt%>
+                        <fieldset class = 'lightgray aligner'>
+            <p>Purchased <strong><%= MusicMixing.WhichPack%></strong> on <%= mm.getMonth() + 1%>/<%= mm.getDate()%>/<%= mm.getFullYear()%></p>
+        </fieldset>
+        <% } else {%>
+            <% x++%>
+            <% } %>
+                    <% }) %>
+
+                    <% BeatOD.forEach(BeatOD => { %>
+                        <% if(BeatOD.user == User) {%>
+                        <% var BOD = BeatOD.createdAt%>
+                        <fieldset class = 'lightgray aligner'>
+            <p>Purchased Beat Seller <strong>"<%= BeatOD.Package%>"</strong> on <%= BOD.getMonth() + 1%>/<%= BOD.getDate()%>/<%= BOD.getFullYear()%></p>
+        </fieldset>
+        <% } else {%>
+            <% u++%>
+            <% } %>
+                    <% }) %>
+                    
+                    <% SB.forEach(SB => { %>
+                        <% var bt = SB.createdAt%>
+                        <% if(SB.CurrUser == User) {%>
+                        <fieldset class = 'lightgray aligner'>
+                            <p>Purchased the Beat <strong class = 'TheBeatName'>"<%=SB.NameBeat %>"</strong> on <%= bt.getMonth() + 1%>/<%= bt.getDate() %>/<%= bt.getFullYear() %> for <strong>$<%= SB.pobBeat%>.00</strong></p>
+                        </fieldset>
+                        <% } else {%>
+                            <% y++%>
+                            <% } %>
+                        <% }) %>
+                        <% BoughtVP.forEach(BoughtVP => { %>
+                            <% if(BoughtVP.VPuser == User) {%>
+                            <% var vpd = BoughtVP.createdAt%>
+                            <fieldset class = 'lightgray aligner'>
+                               <p>Purchased <strong><%= BoughtVP.VPname %></strong> for <strong><%= BoughtVP.VPDAW%></strong> on <%= vpd.getMonth() + 1 %>/<%= vpd.getDate()%>/<%= vpd.getFullYear()%> for <strong>$<%= BoughtVP.VPprice%>.00</strong> </p>
+                            </fieldset>
+                            <% } else { %>
+                                <% w++%>
+                                <% } %>
+                            <% }) %>
+                            <% BDK.forEach(BDK => { %>
+                                <% if(BDK.user == User) {%>
+                                <% var BOD = BDK.createdAt%>
+                                <fieldset class = 'lightgray aligner'>
+                    <p>Purchased The <strong>"<%= BDK.DrumKit%>"</strong> on <%= BOD.getMonth() + 1%>/<%= BOD.getDate()%>/<%= BOD.getFullYear()%></p>
+                </fieldset>
+                <% } else {%>
+                    <% f++%>
+                    <% } %>
+                    <% }) %>
+
+                            <% if(u == BODlen && x == mmlen && y == sblen && w == bvplen && f == BDKlen) {%>
+                                
+                                <fieldset class = 'lightgray aligner'>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                   <h2>You Have made no Payments</h2>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+                                   <br>
+
+                                 </fieldset>
+                                <% } %>
+
+
+
+
+
+                        </div>
+            </div>
+            
+
+
+        </div>
+        
+        </div>
+
+    </div>
+    
+        <script src = "/js/PaymentHistory.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,2819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMixerz | Presets</title>
+    <link rel = "stylesheet" href = "css/presets.css">
+    <link rel="icon" href="/Images/SoundMixerzLogoBlue.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   
+    <%- include("../Partials/tabs.ejs") %>
+
+    <div class = "products">
+        <%- include("../Partials/MailBox.ejs") %>
+        <%- include('../Partials/NotLogged.ejs')%>
+        <div class = "PresetTabHeader">
+            <h1 id = "HPreset">Vocal Presets</h1>
+            </div>
+
+
+
+
+
+
+
+
+        <div class = "search-bar" id = "search-bar">
+            <input type = "text" id = 'Search' placeholder= "Search Presets Here...">
+            <button id = "search-button"><span>🔍</span></button>
+            </div>
+
+
+<div class = 'centered'>
+            <div class = "LogicOrFLContainer">
+
+                <button id = "LogicButton" class = "LogicOrFLButtons">Logic Pro X</button>
+                <button id = "FLStudioButton" class = "LogicOrFLButtons">FL Studio</button>
+    
+    
+    
+    
+                </div>
+                </div>
+
+
+                <div class = 'NothingFound hide center' id = 'NothingFound'>
+                    <h1>Sorry we don't have what your searching for</h1>
+                </div>
+    <div class = 'centered'>
+        <fieldset class = "product fade1" id = 'LilBabyProduct'>
+                <a href = "/Presets/Autumn!"><img src = "Images/Autumn!.jpg"></a>
+                <div class = "description">
+                    <p class = "artistname" id = "artistname1">Autumn! Vocal Preset</p>
+                    <span id = "price" class = "price">$20.00</span>
+                    <br>
+
+                    <% if(LilBaby.length > 0) { %>
+                        <% var x = 0 %>
+                        <% LilBaby.forEach(LilBaby => { %>
+                                <% x = LilBaby.rating + x %>
+                                <% }) %>
+                                <% avg = (x)/LilBaby.length%>
+
+                                <% if(avg < 1) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                    </div>
+                                    <% } %>
+
+                                <% if(avg >= 1 && avg < 1.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+
+                                <% if(avg >= 1.5 && avg < 2) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+
+
+                                <% if(avg >= 2 && avg < 2.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+
+                                <% if(avg >= 2.5 && avg < 3) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                    <% } %>
+
+                                    <% if(avg >= 3 && avg < 3.5) {%>
+
+                                       <div class = 'flexContainer revs'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                        <% } %>
+
+                                        <% if(avg >= 3.5 && avg < 4) {%>
+
+                                            <div class = 'flexContainer revs'>
+                                               
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                                 <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                             </div>
+                                             <% } %>
+
+                                        <% if(avg >= 4 && avg < 4.5) {%>
+                                            <div class = 'flexContainer revs'>
+                                                
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                            <% } %>
+                                            <% if(avg >= 4.5 && avg < 5) {%>
+                                                <div class = 'flexContainer revs'>
+                                                   
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                            </div>
+                                                <% } %>
+                                            <% if(avg == 5) { %>
+                                                <div class = 'flexContainer revs'>
+                                                    
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+    
+                                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                                </div>
+                                            <% } %>
+
+                                <% } else { %>
+                               
+                                    <p id = "avgrev">No Reviews</p>
+                              <% } %>
+                              
+                    <div class = 'SaleWrap hide'><!--DISCOUNT TEMPLATE-->
+                    <p class = "LimitedTime">Limited time Discount</p>
+                    <p class = "Discount">30% OFF</p>
+                    
+                    <p id = "ONSALEprice" class = "price">$14.00</p>
+                    <s class = "price">$20.00</s>
+                </div>
+
+            
+                  
+                    
+                    <select class = "hide" id = "dropdown" onchange="priceChange()">
+                        <option class = "white">Select DAW</option>
+                        <option class = "white">Logic Pro X</option>
+                        <option class = "white">FL Studio</option>
+                       
+                       
+                      
+                    </select>
+                    
+                    
+                    
+                </div>
+        </fieldset>
+    
+
+        <fieldset class = "product fade1" id = 'TylerTheCreatorProduct'>
+            <fieldset class = "Tyler-The-Creator-Color" id = "Tyler-The-Creator-Image-Holder">
+                <a href = "/Presets/DestroyLonely"><img src ="Images/DestroyLonely.jpg"></a>
+            </fieldset>
+                <div class = "description">
+                    <p class = "artistname" id = "artistname2">Destroy Lonely Vocal Preset</p>
+                    
+                    <span id = "price1" class = "price">$20.00</span>
+                
+                    <% if(TylerTheCreator.length > 0) { %>
+                        <% var x = 0 %>
+                        <% TylerTheCreator.forEach(TylerTheCreator => { %>
+                                <% x = TylerTheCreator.rating + x %>
+                                <% }) %>
+                                <% avg = (x)/TylerTheCreator.length%>
+
+                                <% if(avg < 1) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                    </div>
+                                    <% } %>
+
+                                <% if(avg >= 1 && avg < 1.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+
+                                <% if(avg >= 1.5 && avg < 2) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+
+
+                                <% if(avg >= 2 && avg < 2.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+
+                                <% if(avg >= 2.5 && avg < 3) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                    <% } %>
+
+                                    <% if(avg >= 3 && avg < 3.5) {%>
+
+                                       <div class = 'flexContainer revs'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                        <% } %>
+
+                                        <% if(avg >= 3.5 && avg < 4) {%>
+
+                                            <div class = 'flexContainer revs'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                                 <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                             </div>
+                                             <% } %>
+
+                                        <% if(avg >= 4 && avg < 4.5) {%>
+                                            <div class = 'flexContainer revs'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                            <% } %>
+                                            <% if(avg >= 4.5 && avg < 5) {%>
+                                                <div class = 'flexContainer revs'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                            </div>
+                                                <% } %>
+                                            <% if(avg == 5) { %>
+                                                <div class = 'flexContainer revs'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+    
+                                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                                </div>
+                                            <% } %>
+
+                                <% } else { %>
+                               
+                                    <p id = "avgrev">No Reviews</p>
+                              <% } %>
+                    
+                    <select class = "Tyler-The-Creator-Color hide" id = "dropdown1" onchange="priceChange1()">
+                        <option class = "white">Select DAW</option>
+                        <option class = "white">Logic Pro X</option>
+                        <option class = "white">FL Studio</option>
+                        
+                       
+                        
+                    </select>
+                   
+                   
+                </div>
+        </fieldset>
+
+        <fieldset class = "product fade1" id = "YeatProduct">
+           
+                <a href = "/Presets/KenCarson"><img src = "Images/KenCarson.jpg"></a>
+            
+                <div class = "description">
+                   
+                
+                    <p class = "artistname" id = "artistname3" >Ken Carson Vocal Preset</p>
+                    <span id = "price2" class = "price">$20.00</span>
+              <% if(Yeat.length > 0) { %>
+                <% var x = 0 %>
+                <% Yeat.forEach(Yeat => { %>
+                        <% x = Yeat.rating + x %>
+                        <% }) %>
+                        <% avg = (x)/Yeat.length%>
+
+                        <% if(avg < 1) {%>
+                            <div class = 'flexContainer revs'>
+                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                            <% } %>
+
+                        <% if(avg >= 1 && avg < 1.5) {%>
+                            <div class = 'flexContainer revs'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+
+                        <% if(avg >= 1.5 && avg < 2) {%>
+                            <div class = 'flexContainer revs'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+
+
+                        <% if(avg >= 2 && avg < 2.5) {%>
+                            <div class = 'flexContainer revs'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+
+                        <% if(avg >= 2.5 && avg < 3) {%>
+                            <div class = 'flexContainer revs'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                            <% } %>
+
+                            <% if(avg >= 3 && avg < 3.5) {%>
+
+                               <div class = 'flexContainer revs'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                </div>
+                                <% } %>
+
+                                <% if(avg >= 3.5 && avg < 4) {%>
+
+                                    <div class = 'flexContainer revs'>
+                                       
+                                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                                         <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                         <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                         <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                     </div>
+                                     <% } %>
+
+                                <% if(avg >= 4 && avg < 4.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                </div>
+                                    <% } %>
+                                    <% if(avg >= 4.5 && avg < 5) {%>
+                                        <div class = 'flexContainer revs'>
+                                           
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                    </div>
+                                        <% } %>
+                                    <% if(avg == 5) { %>
+                                        <div class = 'flexContainer revs'>
+                                            
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                    <% } %>
+
+                        <% } else { %>
+                       
+                            <p id = "avgrev">No Reviews</p>
+                      <% } %>
+                
+                    
+                    <select class = "Yeat-Color hide" id = "dropdown2" onchange="priceChange2()">
+                        <option class = "white">Select DAW</option>
+                        <option class = "white">Logic Pro X</option>
+                        <option class = "white">FL Studio</option>
+                       
+                        
+                       
+                    </select>
+                   
+                   
+                </div>
+        </fieldset>
+    </div>
+    <div class = 'centered'>
+
+        <fieldset class = "product fade2" id = "ToryLanezProduct">
+           
+                <a href = "/Presets/Torylanez"><img src = "Images/Tory Lanez.jpg"></a>
+           
+                <div class = "description">
+                  
+                    <p class = "artistname" id = "artistname4" >Tory Lanez Vocal Preset</p>
+                    <span id = "price3" class = "price">$20.00</span>
+                    <% if(ToryLanez.length > 0) { %>
+                        <% var x = 0 %>
+                        <% ToryLanez.forEach(ToryLanez => { %>
+                                <% x = ToryLanez.rating + x %>
+                                <% }) %>
+                                <% avg = (x)/ToryLanez.length%>
+        
+                                <% if(avg < 1) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+        
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                    </div>
+                                    <% } %>
+        
+                                <% if(avg >= 1 && avg < 1.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+        
+                                <% if(avg >= 1.5 && avg < 2) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+        
+        
+                                <% if(avg >= 2 && avg < 2.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+        
+                                <% if(avg >= 2.5 && avg < 3) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                    <% } %>
+        
+                                    <% if(avg >= 3 && avg < 3.5) {%>
+        
+                                       <div class = 'flexContainer revs'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                        <% } %>
+        
+                                        <% if(avg >= 3.5 && avg < 4) {%>
+        
+                                            <div class = 'flexContainer revs'>
+                                               
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                                 <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                             </div>
+                                             <% } %>
+        
+                                        <% if(avg >= 4 && avg < 4.5) {%>
+                                            <div class = 'flexContainer revs'>
+                                                
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                            <% } %>
+                                            <% if(avg >= 4.5 && avg < 5) {%>
+                                                <div class = 'flexContainer revs'>
+                                                   
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+        
+                                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                            </div>
+                                                <% } %>
+                                            <% if(avg == 5) { %>
+                                                <div class = 'flexContainer revs'>
+                                                    
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+        
+                                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                                </div>
+                                            <% } %>
+        
+                                <% } else { %>
+                               
+                                    <p id = "avgrev">No Reviews</p>
+                              <% } %>
+                            
+                    <select class = "Tory-Lanez-Color hide" id = "dropdown3" onchange="priceChange3()">
+                        <option class = "white">Select DAW</option>
+                        <option class = "white">Logic Pro X</option>
+                        <option class = "white">FL Studio</option>
+                      
+                       
+                       
+                    </select>
+                    
+                    
+                 
+                </div>
+        </fieldset>
+
+        <fieldset class = "product fade2" id = "BabyKeemProduct">
+           
+                <a href = "/Presets/FrankOcean"><img src = "Images/FrankOcean.jpg"></a>
+           
+                <div class = "description">
+                    
+                    <p class = "artistname" id = "artistname5">Frank Ocean Vocal Preset</p>
+                    <span id = "price4" class = "price">$20.00</span>
+                    <% if(BabyKeem.length > 0) { %>
+                        <% var x = 0 %>
+                        <% BabyKeem.forEach(BabyKeem => { %>
+                                <% x = BabyKeem.rating + x %>
+                                <% }) %>
+                                <% avg = (x)/BabyKeem.length%>
+        
+                                <% if(avg < 1) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+        
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                    </div>
+                                    <% } %>
+        
+                                <% if(avg >= 1 && avg < 1.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+        
+                                <% if(avg >= 1.5 && avg < 2) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+        
+        
+                                <% if(avg >= 2 && avg < 2.5) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+        
+                                <% if(avg >= 2.5 && avg < 3) {%>
+                                    <div class = 'flexContainer revs'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                    <% } %>
+        
+                                    <% if(avg >= 3 && avg < 3.5) {%>
+        
+                                       <div class = 'flexContainer revs'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                        <% } %>
+        
+                                        <% if(avg >= 3.5 && avg < 4) {%>
+        
+                                            <div class = 'flexContainer revs'>
+                                               
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                                 <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                                 <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                             </div>
+                                             <% } %>
+        
+                                        <% if(avg >= 4 && avg < 4.5) {%>
+                                            <div class = 'flexContainer revs'>
+                                                
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                        </div>
+                                            <% } %>
+                                            <% if(avg >= 4.5 && avg < 5) {%>
+                                                <div class = 'flexContainer revs'>
+                                                   
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                <img src = 'Images/Star Half.jpg' class = 'smol'>
+        
+                                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                            </div>
+                                                <% } %>
+                                            <% if(avg == 5) { %>
+                                                <div class = 'flexContainer revs'>
+                                                    
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+        
+                                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                                </div>
+                                            <% } %>
+        
+                                <% } else { %>
+                               
+                                    <p id = "avgrev">No Reviews</p>
+                              <% } %>
+                    <select class = "Baby-Keem-Color hide" id = "dropdown4" onchange="priceChange4()">
+                        <option class = "white">Select DAW</option>
+                        <option class = "white">Logic Pro X</option>
+                        <option class = "white">FL Studio</option>
+                      
+                       
+                       
+                    </select>
+                    
+                   
+                    
+                </div>
+        </fieldset>
+        <fieldset class = "product fade2" id = "DonToliverProduct">
+           
+                <a href = "/Presets/dontoliver"><img src = "Images/Don-Toliver.webp"></a>
+    
+    <div class = "description">
+       
+        <p class = "artistname" id = "artistname6">Don Toliver Vocal Preset</p>
+        <span id = "price5" class = "price">$20.00</span>
+        <% if(DonToliver.length > 0) { %>
+            <% var x = 0 %>
+            <% DonToliver.forEach(DonToliver => { %>
+                    <% x = DonToliver.rating + x %>
+                    <% }) %>
+                    <% avg = (x)/DonToliver.length%>
+
+                    <% if(avg < 1) {%>
+                        <div class = 'flexContainer revs'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                        <% } %>
+
+                    <% if(avg >= 1 && avg < 1.5) {%>
+                        <div class = 'flexContainer revs'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+
+                    <% if(avg >= 1.5 && avg < 2) {%>
+                        <div class = 'flexContainer revs'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+
+
+                    <% if(avg >= 2 && avg < 2.5) {%>
+                        <div class = 'flexContainer revs'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+
+                    <% if(avg >= 2.5 && avg < 3) {%>
+                        <div class = 'flexContainer revs'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <img src = 'Images/Star empty.jpg' class = 'smol'>
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                        <% } %>
+
+                        <% if(avg >= 3 && avg < 3.5) {%>
+
+                           <div class = 'flexContainer revs'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                            <% } %>
+
+                            <% if(avg >= 3.5 && avg < 4) {%>
+
+                                <div class = 'flexContainer revs'>
+                                   
+                                     <img src = 'Images/Star full.jpg' class = 'smol'>
+                                     <img src = 'Images/Star full.jpg' class = 'smol'>
+                                     <img src = 'Images/Star full.jpg' class = 'smol'>
+                                     <img src = 'Images/Star Half.jpg' class = 'smol'>
+                                     <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                     <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                 </div>
+                                 <% } %>
+
+                            <% if(avg >= 4 && avg < 4.5) {%>
+                                <div class = 'flexContainer revs'>
+                                    
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                                <% } %>
+                                <% if(avg >= 4.5 && avg < 5) {%>
+                                    <div class = 'flexContainer revs'>
+                                       
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                </div>
+                                    <% } %>
+                                <% if(avg == 5) { %>
+                                    <div class = 'flexContainer revs'>
+                                        
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                                        <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                                    </div>
+                                <% } %>
+
+                    <% } else { %>
+                   
+                        <p id = "avgrev">No Reviews</p>
+                  <% } %>
+             
+        <select class = "Don-Toliver-Color hide" id = "dropdown5" onchange="priceChange5()">
+            <option class = "white">Select DAW</option>
+            <option class = "white Don-Toliver-Color">Logic Pro X</option>
+            <option class = "white Don-Toliver-Color">FL Studio</option>
+            
+            <option class = "white Don-Toliver-Color" value = "30">Wave</option>
+           
+        </select>
+       
+       
+        
+    </div>
+</fieldset>
+</div>
+<div class = 'hide'>
+<fieldset class = "product fade3 hide" id = "BrentFaiyazProduct">
+        <a href = "/Presets/Brentfaiyaz"><img src = "Images/Brent Faiyaz.jpg"></a>
+<div class = "description">
+
+<p class = "artistname" id = "artistname7">Brent Faiyaz Vocal Preset</p>
+<span id = "price6" class = "price">$20.00</span>
+<% if(BrentFaiyaz.length > 0) { %>
+    <% var x = 0 %>
+    <% BrentFaiyaz.forEach(BrentFaiyaz => { %>
+            <% x = BrentFaiyaz.rating + x %>
+            <% }) %>
+            <% avg = (x)/BrentFaiyaz.length%>
+
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+
+                <% if(avg >= 3 && avg < 3.5) {%>
+
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+
+                    <% if(avg >= 3.5 && avg < 4) {%>
+
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+
+<select id = "dropdown6" class = 'hide'onchange="priceChange6()">
+    <option class = "white">Select DAW</option>
+    <option class = "white">Logic Pro X</option>
+    <option class = "white">FL Studio</option>
+    
+   
+   
+</select>
+
+
+</div>
+</fieldset>
+</div>
+<div class = 'hide'>
+
+<fieldset class = "product fade3" id = "TheWeekendProduct">
+        <a href = "/Presets/TheWeeknd"><img src = "Images/The Weekend.jpg"></a>
+<div class = "description">
+
+<p class = "artistname" id = "artistname8" >The Weeknd Vocal Preset</p>
+<span id = "price7" class = "price">$20.00</span>
+<% if(TheWeeknd.length > 0) { %>
+    <% var x = 0 %>
+    <% TheWeeknd.forEach(TheWeeknd => { %>
+            <% x = TheWeeknd.rating + x %>
+            <% }) %>
+            <% avg = (x)/TheWeeknd.length%>
+
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+
+                <% if(avg >= 3 && avg < 3.5) {%>
+
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+
+                    <% if(avg >= 3.5 && avg < 4) {%>
+
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+
+<select id = "dropdown7" class = 'hide'onchange="priceChange7()">
+    <option class = "white">Select DAW</option>
+    <option class = "white">Logic Pro X</option>
+    <option class = "white">FL Studio</option>
+    
+   
+   
+</select>
+
+
+
+</div>
+</fieldset>
+</div>
+<div class = 'centered'>
+
+<fieldset class = "product fade3" id = "JojiProduct">
+    
+        <a href = "/Presets/BrysonTiller"><img src = "Images/BrysonTiller.jpg"></a>
+
+<div class = "description">
+
+<p class = "artistname" id = "artistname9">Bryson Tiller Vocal Preset</p>
+<span id = "price8" class = "price">$20.00</span>
+<% if(Joji.length > 0) { %>
+    <% var x = 0 %>
+    <% Joji.forEach(Joji => { %>
+            <% x = Joji.rating + x %>
+            <% }) %>
+            <% avg = (x)/Joji.length%>
+
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+
+                <% if(avg >= 3 && avg < 3.5) {%>
+
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+
+                    <% if(avg >= 3.5 && avg < 4) {%>
+
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+        
+<select id = "dropdown8" class = 'hide'onchange="priceChange8()">
+    <option class = "white">Select DAW</option>
+    <option class = "white">Logic Pro X</option>
+    <option class = "white">FL Studio</option>
+    
+   
+   
+</select>
+
+
+
+</div>
+</fieldset>
+
+<fieldset class = "product fade3" id = "TravisScottProduct">
+        <a href = "/Presets/TravisScott"><img src = "Images/Travis Scott Image.jpg"></a>
+<div class = "description">
+
+<p class = "artistname" id = "artistname10">Travis Scott Vocal Preset</p>
+<span id = "price9" class = "price">$20.00</span>
+<% if(TravisScott.length > 0) { %>
+    <% var x = 0 %>
+    <% TravisScott.forEach(TravisScott => { %>
+            <% x = TravisScott.rating + x %>
+            <% }) %>
+            <% avg = (x)/TravisScott.length%>
+
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+
+                <% if(avg >= 3 && avg < 3.5) {%>
+
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+
+                    <% if(avg >= 3.5 && avg < 4) {%>
+
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+
+<select id = "dropdown9" class = 'hide'onchange="priceChange9()">
+    <option class = "white">Select DAW</option>
+    <option class = "white">Logic Pro X</option>
+    <option class = "white">FL Studio</option>
+    
+   
+   
+</select>
+
+
+
+</div>
+</fieldset>
+
+<div class = 'hide'>
+
+<fieldset class = "product fade4" id = "PlayBoiCartiProduct">
+        <a href = "/Presets/PlayboiCarti"><img src = "Images/PlayBoi Carti.jpg"></a>
+<div class = "description">
+
+<p class = "artistname" id = "artistname11" >PlayBoi Carti Vocal Preset</p>
+<span id = "price10" class = "price">$20.00</span>
+<% if(PlayBoiCarti.length > 0) { %>
+    <% var x = 0 %>
+    <% PlayBoiCarti.forEach(PlayBoiCarti => { %>
+            <% x = PlayBoiCarti.rating + x %>
+            <% }) %>
+            <% avg = (x)/PlayBoiCarti.length%>
+
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+
+                <% if(avg >= 3 && avg < 3.5) {%>
+
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+
+                    <% if(avg >= 3.5 && avg < 4) {%>
+
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+
+<select id = "dropdown10" class = 'hide'onchange="priceChange10()">
+    <option class = "white">Select DAW</option>
+    <option class = "white">Logic Pro X</option>
+    <option class = "white">FL Studio</option>
+    
+   
+   
+</select>
+
+
+
+</div>
+</fieldset>
+</div>
+
+<fieldset class = "product fade3" id = "LilTjayProduct">
+        <a href = "/Presets/LilTjay"><img src = "Images/Lil Tjay Image.jpg"></a>
+<div class = "description">
+<p class = "artistname" id = "artistname12">Lil Tjay Vocal Preset</p>
+<span id = "price11" class = "price">$20.00</span>
+<% if(LilTjay.length > 0) { %>
+    <% var x = 0 %>
+    <% LilTjay.forEach(LilTjay => { %>
+            <% x = LilTjay.rating + x %>
+            <% }) %>
+            <% avg = (x)/LilTjay.length%>
+
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+
+                <% if(avg >= 3 && avg < 3.5) {%>
+
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+
+                    <% if(avg >= 3.5 && avg < 4) {%>
+
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+        
+<select id = "dropdown11" class = 'hide'onchange="priceChange11()">
+    <option class = "white">Select DAW</option>
+    <option class = "white">Logic Pro X</option>
+    <option class = "white">FL Studio</option>
+    
+   
+   
+</select>
+
+
+
+</div>
+</fieldset>
+</div>
+<div class = 'hide'>
+
+<fieldset class = "product fade5" id = "PostMaloneProduct">
+    <a href = "/Presets/PostMalone"><img src = "Images/Post Malone.jpg"></a>
+<div class = "description">
+<p class = "artistname" id = "artistname13">Post Malone Vocal Preset</p>
+<span id = "price12" class = "price">$20.00</span>
+<% if(PostMalone.length > 0) { %>
+<% var x = 0 %>
+<% PostMalone.forEach(PostMalone => { %>
+        <% x = PostMalone.rating + x %>
+        <% }) %>
+        <% avg = (x)/PostMalone.length%>
+
+        <% if(avg < 1) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+            </div>
+            <% } %>
+
+        <% if(avg >= 1 && avg < 1.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 1.5 && avg < 2) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+
+        <% if(avg >= 2 && avg < 2.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 2.5 && avg < 3) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+            <% } %>
+
+            <% if(avg >= 3 && avg < 3.5) {%>
+
+               <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+                <% if(avg >= 3.5 && avg < 4) {%>
+
+                    <div class = 'flexContainer revs'>
+                       
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star Half.jpg' class = 'smol'>
+                         <img src = 'Images/Star empty.jpg' class = 'smol'>
+                         <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                     </div>
+                     <% } %>
+
+                <% if(avg >= 4 && avg < 4.5) {%>
+                    <div class = 'flexContainer revs'>
+                        
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+                    <% if(avg >= 4.5 && avg < 5) {%>
+                        <div class = 'flexContainer revs'>
+                           
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                    <% if(avg == 5) { %>
+                        <div class = 'flexContainer revs'>
+                            
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                    <% } %>
+
+        <% } else { %>
+       
+            <p id = "avgrev">No Reviews</p>
+      <% } %>
+
+      <select id = "dropdown12" class = 'hide'onchange="priceChange12()">
+        <option class = "white">Select DAW</option>
+        <option class = "white">Logic Pro X</option>
+        <option class = "white">FL Studio</option>
+        
+       
+       
+    </select>
+    
+    
+    
+</div>
+</fieldset>
+</div>
+
+<div class = 'centered'>
+
+<fieldset class = "product fade4" id = "SoFaygoProduct">
+    <a href = "/Presets/SoFaygo"><img src = "Images/SoFaygo.jpg"></a>
+<div class = "description">
+<p class = "artistname" id = "artistname14">SoFaygo Vocal Preset</p>
+<span id = "price13" class = "price">$20.00</span>
+<% if(SoFaygo.length > 0) { %>
+<% var x = 0 %>
+<% SoFaygo.forEach(SoFaygo => { %>
+        <% x = SoFaygo.rating + x %>
+        <% }) %>
+        <% avg = (x)/SoFaygo.length%>
+
+        <% if(avg < 1) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+            </div>
+            <% } %>
+
+        <% if(avg >= 1 && avg < 1.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 1.5 && avg < 2) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+
+        <% if(avg >= 2 && avg < 2.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 2.5 && avg < 3) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+            <% } %>
+
+            <% if(avg >= 3 && avg < 3.5) {%>
+
+               <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+                <% if(avg >= 3.5 && avg < 4) {%>
+
+                    <div class = 'flexContainer revs'>
+                       
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star Half.jpg' class = 'smol'>
+                         <img src = 'Images/Star empty.jpg' class = 'smol'>
+                         <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                     </div>
+                     <% } %>
+
+                <% if(avg >= 4 && avg < 4.5) {%>
+                    <div class = 'flexContainer revs'>
+                        
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+                    <% if(avg >= 4.5 && avg < 5) {%>
+                        <div class = 'flexContainer revs'>
+                           
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                    <% if(avg == 5) { %>
+                        <div class = 'flexContainer revs'>
+                            
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                    <% } %>
+
+        <% } else { %>
+       
+            <p id = "avgrev">No Reviews</p>
+      <% } %>
+
+      <select id = "dropdown13" class = 'hide'onchange="priceChange13()">
+        <option class = "white">Select DAW</option>
+        <option class = "white">Logic Pro X</option>
+        <option class = "white">FL Studio</option>
+        
+       
+       
+    </select>
+    
+    
+    
+</div>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+    <fieldset class = "product fade4" id = "TheKidLaroiProduct">
+        <a href = "/Presets/TheKidLaroi"><img src = "Images/TheKidLaroi.jpg"></a>
+    <div class = "description">
+    <p class = "artistname" id = "artistname15">The Kid LAROI Vocal Preset</p>
+    <span id = "price14" class = "price">$20.00</span>
+    <% if(TheKidLaroi.length > 0) { %>
+    <% var x = 0 %>
+    <% TheKidLaroi.forEach(TheKidLaroi => { %>
+            <% x = TheKidLaroi.rating + x %>
+            <% }) %>
+            <% avg = (x)/TheKidLaroi.length%>
+    
+            <% if(avg < 1) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+    
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+    
+            <% if(avg >= 1 && avg < 1.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+    
+            <% if(avg >= 1.5 && avg < 2) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+    
+    
+            <% if(avg >= 2 && avg < 2.5) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+            <% } %>
+    
+            <% if(avg >= 2.5 && avg < 3) {%>
+                <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star Half.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+        </div>
+                <% } %>
+    
+                <% if(avg >= 3 && avg < 3.5) {%>
+    
+                   <div class = 'flexContainer revs'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                    <% } %>
+    
+                    <% if(avg >= 3.5 && avg < 4) {%>
+    
+                        <div class = 'flexContainer revs'>
+                           
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star full.jpg' class = 'smol'>
+                             <img src = 'Images/Star Half.jpg' class = 'smol'>
+                             <img src = 'Images/Star empty.jpg' class = 'smol'>
+                             <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                         </div>
+                         <% } %>
+    
+                    <% if(avg >= 4 && avg < 4.5) {%>
+                        <div class = 'flexContainer revs'>
+                            
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star empty.jpg' class = 'smol'>
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                        <% if(avg >= 4.5 && avg < 5) {%>
+                            <div class = 'flexContainer revs'>
+                               
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star Half.jpg' class = 'smol'>
+    
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                            <% } %>
+                        <% if(avg == 5) { %>
+                            <div class = 'flexContainer revs'>
+                                
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+                                <img src = 'Images/Star full.jpg' class = 'smol'>
+    
+                                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                            </div>
+                        <% } %>
+    
+            <% } else { %>
+           
+                <p id = "avgrev">No Reviews</p>
+          <% } %>
+    
+          <select id = "dropdown14" class = 'hide'onchange="priceChange14()">
+            <option class = "white">Select DAW</option>
+            <option class = "white">Logic Pro X</option>
+            <option class = "white">FL Studio</option>
+            
+           
+           
+        </select>
+        
+        
+        
+</div>
+</fieldset>
+
+<div class = 'hide'>
+
+<fieldset class = "product fade6" id = "TrippieReddProduct">
+    <a href = "/Presets/TrippieRedd"><img src = "Images/Trippie Redd.jpg"></a>
+<div class = "description">
+<p class = "artistname" id = "artistname16">Trippie Redd Vocal Preset</p>
+<span id = "price15" class = "price">$20.00</span>
+<% if(TrippieRedd.length > 0) { %>
+<% var x = 0 %>
+<% TrippieRedd.forEach(TrippieRedd => { %>
+        <% x = TrippieRedd.rating + x %>
+        <% }) %>
+        <% avg = (x)/TrippieRedd.length%>
+
+        <% if(avg < 1) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+            </div>
+            <% } %>
+
+        <% if(avg >= 1 && avg < 1.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 1.5 && avg < 2) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+
+        <% if(avg >= 2 && avg < 2.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 2.5 && avg < 3) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+            <% } %>
+
+            <% if(avg >= 3 && avg < 3.5) {%>
+
+               <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+                <% if(avg >= 3.5 && avg < 4) {%>
+
+                    <div class = 'flexContainer revs'>
+                       
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star Half.jpg' class = 'smol'>
+                         <img src = 'Images/Star empty.jpg' class = 'smol'>
+                         <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                     </div>
+                     <% } %>
+
+                <% if(avg >= 4 && avg < 4.5) {%>
+                    <div class = 'flexContainer revs'>
+                        
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+                    <% if(avg >= 4.5 && avg < 5) {%>
+                        <div class = 'flexContainer revs'>
+                           
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                    <% if(avg == 5) { %>
+                        <div class = 'flexContainer revs'>
+                            
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                    <% } %>
+
+        <% } else { %>
+       
+            <p id = "avgrev">No Reviews</p>
+      <% } %>
+
+      <select id = "dropdown15" class = 'hide'onchange="priceChange15()">
+        <option class = "white">Select DAW</option>
+        <option class = "white">Logic Pro X</option>
+        <option class = "white">FL Studio</option>
+        
+       
+       
+</select>
+    
+    
+    
+</div>
+</fieldset>
+</div>
+
+
+
+
+<fieldset class = "product fade4" id = "TyDollaSignProduct">
+    <a href = "/Presets/LilUziVert"><img src = "/Images/Lil Uzi Vert.jpg"></a>
+<div class = "description">
+<p class = "artistname" id = "artistname17">Lil Uzi Vert Vocal Preset</p>
+<span id = "price16" class = "price">$20.00</span>
+<% if(TyDollaSign.length > 0) { %>
+<% var x = 0 %>
+<% TyDollaSign.forEach(TyDollaSign => { %>
+        <% x = TyDollaSign.rating + x %>
+        <% }) %>
+        <% avg = (x)/TyDollaSign.length%>
+
+        <% if(avg < 1) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+            </div>
+            <% } %>
+
+        <% if(avg >= 1 && avg < 1.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 1.5 && avg < 2) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+
+        <% if(avg >= 2 && avg < 2.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 2.5 && avg < 3) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+            <% } %>
+
+            <% if(avg >= 3 && avg < 3.5) {%>
+
+               <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+                <% if(avg >= 3.5 && avg < 4) {%>
+
+                    <div class = 'flexContainer revs'>
+                       
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star Half.jpg' class = 'smol'>
+                         <img src = 'Images/Star empty.jpg' class = 'smol'>
+                         <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                     </div>
+                     <% } %>
+
+                <% if(avg >= 4 && avg < 4.5) {%>
+                    <div class = 'flexContainer revs'>
+                        
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+                    <% if(avg >= 4.5 && avg < 5) {%>
+                        <div class = 'flexContainer revs'>
+                           
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                    <% if(avg == 5) { %>
+                        <div class = 'flexContainer revs'>
+                            
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                    <% } %>
+
+        <% } else { %>
+       
+            <p id = "avgrev">No Reviews</p>
+      <% } %>
+
+      <select id = "dropdown16" class = 'hide'onchange="priceChange16()">
+        <option class = "white">Select DAW</option>
+        <option class = "white">Logic Pro X</option>
+        <option class = "white">FL Studio</option>
+        
+       
+       
+</select>
+    
+    
+    
+</div>
+</fieldset>
+
+
+
+
+<div class = 'hide'>
+
+<fieldset class = "product fade6" id = "YNWMellyProduct">
+    <a href = "/Presets/YNWMelly"><img src = "Images/ynw melly.jpg"></a>
+<div class = "description">
+<p class = "artistname" id = "artistname18">YNW Melly Vocal Preset</p>
+<span id = "price17" class = "price">$20.00</span>
+<% if(YNWMelly.length > 0) { %>
+<% var x = 0 %>
+<% YNWMelly.forEach(YNWMelly => { %>
+        <% x = YNWMelly.rating + x %>
+        <% }) %>
+        <% avg = (x)/YNWMelly.length%>
+
+        <% if(avg < 1) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+            </div>
+            <% } %>
+
+        <% if(avg >= 1 && avg < 1.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 1.5 && avg < 2) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+
+        <% if(avg >= 2 && avg < 2.5) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+        <% } %>
+
+        <% if(avg >= 2.5 && avg < 3) {%>
+            <div class = 'flexContainer revs'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star full.jpg' class = 'smol'>
+                <img src = 'Images/Star Half.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <img src = 'Images/Star empty.jpg' class = 'smol'>
+                <span id = "avgrev"><%= avg.toFixed(1) %></span>
+    </div>
+            <% } %>
+
+            <% if(avg >= 3 && avg < 3.5) {%>
+
+               <div class = 'flexContainer revs'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                <% } %>
+
+                <% if(avg >= 3.5 && avg < 4) {%>
+
+                    <div class = 'flexContainer revs'>
+                       
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star full.jpg' class = 'smol'>
+                         <img src = 'Images/Star Half.jpg' class = 'smol'>
+                         <img src = 'Images/Star empty.jpg' class = 'smol'>
+                         <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                     </div>
+                     <% } %>
+
+                <% if(avg >= 4 && avg < 4.5) {%>
+                    <div class = 'flexContainer revs'>
+                        
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star full.jpg' class = 'smol'>
+                    <img src = 'Images/Star empty.jpg' class = 'smol'>
+                    <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                </div>
+                    <% } %>
+                    <% if(avg >= 4.5 && avg < 5) {%>
+                        <div class = 'flexContainer revs'>
+                           
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star full.jpg' class = 'smol'>
+                        <img src = 'Images/Star Half.jpg' class = 'smol'>
+
+                        <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                    </div>
+                        <% } %>
+                    <% if(avg == 5) { %>
+                        <div class = 'flexContainer revs'>
+                            
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+                            <img src = 'Images/Star full.jpg' class = 'smol'>
+
+                            <span id = "avgrev"><%= avg.toFixed(1) %></span>
+                        </div>
+                    <% } %>
+
+        <% } else { %>
+       
+            <p id = "avgrev">No Reviews</p>
+      <% } %>
+
+      <select id = "dropdown17" class = 'hide'onchange="priceChange17()">
+        <option class = "white">Select DAW</option>
+        <option class = "white">Logic Pro X</option>
+        <option class = "white">FL Studio</option>
+        
+       
+       
+</select>
+    
+    
+    
+</div>
+</fieldset>
+</div>
+
+</div>
+
+
+
+
+
+    </div>
+    <%- include('../Partials/footer.ejs') %>
+    <script src = "js/presets.js"></script>
+</body>
+</html>
