@@ -1,0 +1,11 @@
+<% var NewItem = 0 %>
+<% Orders.forEach(Orders => { %>
+    <% if(User == Orders.user) { %>
+        <% NewItem++ %>
+    <% } %>
+    <% }) %>
+    <% if(NewItem > 0){ %>
+    <div class = 'CartNum' id = 'CartNum'>
+        <p><%= NewItem %></p>
+    </div>
+    <% } %>
