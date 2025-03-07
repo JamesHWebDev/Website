@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | SoundMixerz</title>
+    <link rel="icon" href="/Images/SoundMixerzLogoBlue.jpg" type="image/x-icon">
+
+    <style>
+        :root {
+            --plyr-color-main: #121212; /*progress bar color */
+            --plyr-control-background: #555;
+            --plyr-control-hover: #777;
+            --plyr-control-active: #aaa;
+            --plyr-progress-background: purple;
+            --plyr-progress-buffer: #888;
+            --plyr-volume-background: #999;
+            --plyr-volume-bar: #00ff00;
+            --plyr-volume-icon: #fff;
+            --plyr-play-progress-color: #0000ff;
+        }
+    </style>
+    <link rel = "stylesheet" href = "/css/SellPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <%- include("../Partials/Seller.ejs") %>
+    <div id = 'LoadingOuter'>
+        <div class="loader"></div>
+        <p>Give us one minute while we move things around...</p>
+        </div>
+    <div class = "products">
+        <%- include("../Partials/MailBox.ejs") %>
+        <%- include('../Partials/NotLogged.ejs')%>
+        <div id = 'sucfavbeat'>
+            <p id = 'favp' class = 'FavBeattxt'>Favorited Beat!</p>
+            <p id = 'DelFav' class = 'FavBeattxt hide'>Removed out of Favorites</p>
+
+
+        </div>
+        <div id = 'PurchBeat' class = 'aligner'>
+            <p>Succsessfully Purchased Beat Congratulations!</p>
+            <p>Go to the Purchases Tab and Download your Beat there!</p>
+            <p>or Click the Button below!</p>
+            <a href = '/account/purchases'>
+            <button id = 'TMT'>Take Me There</button>
+        </a>
+        </div>
+        <a href = '/OtherBeats/<%= BT.username%>' class = 'yeshow'>
+        <div class = 'userinfo flexContainer' id = 'userinfo'>
+            <div class = 'profPicHolder'>
+                <% UD.forEach(UD => { %>
+                    <% if(UD.username == BT.username){ %>
+                        <% if(UD.pfp == 'avatar.jpg'){ %>
+                            <img src = '/Images/<%= UD.pfp %>' id = 'ProfPic'>
+                            <% } else {%>
+                                <img src = '<%= url %>' id = 'ProfPic'>
+
+                                <% } %>
+                        <% } %>
+               <% }) %>
+            
+        </div>
+        <div class = 'usernameHolder'>
+            <span id = 'UsernameSpan'><%= BT.username%></span>
+            <% if(BT.username == 'SoundMixerz' || BT.username == 'JamesHDev' || BT.username == 'SkullyFresh'){ %>
+                <span class = 'ExtRole'>Owner</span>
+                <% } %>
+        </div>
+
+        <% console.log(UD.package) %>
+
+        <div class = 'BadgeHolder'>
+            <% UD.forEach(UD => { %>
+                <% if(UD.username == BT.username){ %>
+                    <% if(UD.package !== 'free'){ %>
+                        <% if(UD.package == 'Basic'){ %>
+                            <img title = 'Basic Badge' class = 'badges' src = '/Images/BasicBadge.jpg'>
+                            <% } %>
+                            <% if(UD.package == 'Pro'){ %>
+                                <img title = 'Pro Badge' class = 'badges' src = '/Images/ProBadge.jpg'>
+                                <% } %>
+                        <% } %>
+                    <% } %>
+            <% }) %>
+           
+        </div>
+        
+
+        </div>
+
+    </a>
+
+    <div class = 'reportButtonCon' id = 'reportButtonCon'>
+        <a href = '/ReportBeat/<%= BT._id %>'>
+        <button id = 'reportButtonDes' title = 'Report'>!</button>
+        </a>
+    </div>
+        <div class = 'flexContainer'>
+    <div id = 'UsersContent' class = 'UsersContent'>
+        <div class = 'bigAud'>
+        <audio controls controlslist = "nodownload"  id = 'MainAud' src = '/BeatsUploaded/<%= BT.file %>'>
+        </div>
+
+        <!--USER'S DESCRIPTION GOES HERE-->
+        <div id = 'UserDesc' class = 'aligner'>
+            
+            <h2  id = 'descriptionHeading'>Description</h2>
+            <fieldset id = 'descCon'>
+                <% if(BT.description == '') { %>
+                    <p>This Beat Does Not Have a Description...</p>
+                    <% } else { %>
+                        <p><%= BT.description%></p>
+                        <p></p>
+                  <%  } %>
+            <p></p>
+            </fieldset>
+           </div>
+
+          
+
+           </div>
+         
+        <div id = 'checkout'>
+           
+               
+             
+                <a href = '/beats/<%= BT._id %>' class = 'woms'>
+                <% if(BT.tag3 !== ''){ %>
+                <div id = 'Beat_0'class = "audioContainer zeroToOneMin <%= BT.tag1 %> <%= BT.tag2 %> <%=BT.tag3 %>" >
+              <%  } else if(BT.tag2 !== ''){%>
+                <div id = 'Beat_0'class = "audioContainer zeroToOneMin <%= BT.tag1 %> <%= BT.tag2 %>">
+                
+                <% } else if(BT.tag1 !== ''){ %>
+                    <div id = 'Beat_0'class = "audioContainer zeroToOneMin <%= BT.tag1 %>">
+              <%  } else {%>
+                <div id = 'Beat_0'class = "audioContainer zeroToOneMin NOTAGS">
+                <% } %>
+                    <div class = 'aligner'>
+                        
+                       
+                    
+            
+                            
+                    
+                        <% if(BT.src == 'NoImg.jpg'){ %>
+                            <div class = "backgroundimg">
+                            <img src = '/Images/<%= BT.src %>'>
+                            <div class = "overlay-text">
+                            </a>
+                            <button class = 'play-btn' id = 'Play_0'  data-doc = '<%= BT.id%>'>&#9654;</button>
+                            <% if(FV.length > 0) {%>
+                                <% var j = 0%>
+                                <% var FVlen = FV.length%>
+                                <% FV.forEach(FV => { %>
+                                    <% j = j + 1%>
+                                    
+                                    
+            
+                                    <% if(FV.user == User && FV.ID == BT._id ){%>
+            
+                                <button data-id = '<%= BT.id%>' data-user = '<%= User%>'id = 'Fav_0' data-fv = '<%= FV._id%>'class = 'fav-btn' >♥</button>
+            
+                                   <% } else if(FV.user !== User || FV.ID !== BT._id){%>
+            
+                                <button data-id = '<%= BT.id%>' data-user = '<%= User%>'id = 'Fav_0' class = 'fav-btn' >♡</button>
+            
+                                    <% } %>
+                                   
+                               <% }) %>
+                           
+            
+                            <% } else {%>
+                                <button data-id = '<%= BT.id%>' data-user = '<%= User%>'id = 'Fav_0' class = 'fav-btn' >♡</button>
+            
+                                <% } %>
+            
+                            
+                            </div>
+                            </div>
+            
+                            <% } else {%>
+                                <div class = "backgroundimg">
+                                    <img src = '<%= picurl %>'>
+                        <div class = "overlay-text">
+                        </a>
+                       
+                            <button class = 'play-btn' id = 'Play_0'  data-doc = '<%= BT.id%>' >&#9654;</button>
+                            <% if(FV.length > 0) {%>
+                                <% var k = 0%>
+                                <% var FVlen = FV.length%>
+                                <% FV.forEach(FV => { %>
+                                    <% k++%>
+                                    <% if(FV.user == User && FV.ID == BT._id){%>
+            
+                                <button data-id = '<%= BT.id%>' data-user = '<%= User%>'id = 'Fav_0' data-fv = '<%= FV._id%>'class = 'fav-btn' >♥</button>
+            
+                                   <% } else if(k == FVlen){%>
+            
+                                <button data-id = '<%= BT.id%>' data-user = '<%= User%>'id = 'Fav_0' class = 'fav-btn' >♡</button>
+            
+                                    <% } %>
+                                   
+                               <% }) %>
+                           
+            
+                            <% } else {%>
+                                <button data-id = '<%= BT.id%>' data-user = '<%= User%>'id = 'Fav_0' class = 'fav-btn' >♡</button>
+            
+                                <% } %>
+                            
+            
+                        </div>
+                        </div>
+                     
+                        <% } %>
+                        <a href = '/beats/<%= BT._id %>' class = 'woms'>
+                        <% if(BT.tag1 == ''){ %>
+                
+                        </div>
+                
+                    
+                    
+                      <% } %>
+                        <%if(BT.tag1 !== ''){ %>
+                            <div class = "SearchTags flexContainer"><!--TAGS-->
+                                <div class = "SkyBlue <%= BT.tag1 %>Tag LilDurk" title = "Tag">
+                                    <ul>
+                                        <li class = "TagName"><%= BT.tag1 %></li>
+                                    </ul>
+                                </div>
+                            
+                       <% if(BT.tag2 == ''){ %>
+                       
+                            </div>
+                        
+                        </div>
+                    
+                    
+                        <% } %>
+                     <% } %>
+                        
+                     <%if(BT.tag2 !== ''){ %>
+                        
+                            <div class = "SkyBlue <%= BT.tag2 %>Tag LilDurk" title = "Tag">
+                                <ul>
+                                    <li class = "TagName"><%= BT.tag2 %></li>
+                                </ul>
+                            </div>
+                       
+                            <% if(BT.tag3 == ''){ %>
+                          
+                            </div>
+                    
+                        </div>
+                    
+                    
+                            <% } %>
+                            <% } %>
+                        <%if(BT.tag3 !== ''){ %>
+                          
+                                <div class = "SkyBlue <%= BT.tag3 %>Tag LilDurk" title = "Tag">
+                                    <ul>
+                                        <li class = "TagName"><%= BT.tag3 %></li>
+                                    </ul>
+                                </div>
+                                </div>
+                            
+                        
+                
+                        </div>
+                    
+                    <% } %>
+                <div class = 'aligner'>
+                <span class = 'beatname'><%= BT.beatname%>  </span>
+            
+                <div class = 'leftaligner spaup'>
+                <span class = 'price'>  $<%= BT.pob.toFixed(2) %></span>
+                <span class = 'BPM'><%= BT.BPM%> BPM</span>
+                </div>
+                <div class = 'spaup'>
+                    <form id = 'Bobeat'>
+                    <a id = 'delete' data-beat="<%= BT._id%>"><button id = 'buybutton' data-doc="<%= BT._id%>">Buy Now</button></a>
+                  
+                        <input class = 'hiddeninp' type = 'text'id = 'CurrUser' name = 'CurrUser' value = '<%= User%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'SellUser' name = 'SellUser' value = '<%= BT.username%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'NameBeat' name = 'NameBeat' value = '<%= BT.beatname%>'readonly >  
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'pobBeat' name = 'pobBeat' value = '<%= BT.pob%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'ID' name = 'ID' value = '<%= BT._id%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'filename' name = 'filename' value = '<%= BT.file%>'readonly >
+                        <br>
+                        
+                        <input class = 'hiddeninp' type = 'text'id = 'CurrUser' name = 'UserCurr' value = '<%= User%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'SellUser' name = 'UserSell' value = '<%= BT.username%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'NameBeat' name = 'BeatName' value = '<%= BT.beatname%>'readonly >  
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'pobBeat' name = 'Beatpob' value = '<%= BT.pob%>'readonly >
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'filename' name = 'NameFile' value = '<%= BT.file%>'readonly > 
+                        <br>
+                        <input class = 'hiddeninp' type = 'text'id = 'src' name = 'src' value = '<%= BT.extSrc%>'readonly >     
+    
+                </form>
+            </div>
+                </div>
+            </a>
+            
+            </div>
+            
+                
+        </div>   
+            
+        
+                
+       
+
+    </div>
+    <div class = 'hide'>
+    <div class = 'flexContainer playr hide' id = 'mainbottomDiv'>
+        <div class = 'firstplayr'>
+            <button class = 'grepri' id = 'BotDivPrice'></button>
+            
+        </div>
+        <div class = 'midplayr'>
+            <span id = 'BottomDivBeatName'></span>
+            <audio controls controlslist = "nodownload" class = 'BotPlyr' id = 'MainAud'>
+        </div>
+        <div class = 'witplayr'>
+            <div class = 'PicWithUser'>
+                <a href = '' id = 'miniID'>
+                    <div class = 'flexContainer'>
+                <img id = 'miniPic'>
+                <span id = 'userPic'></span>
+                
+            </div>
+            </a>
+            </div>
+            
+        </div>
+    
+    </div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <script src = '/js/SellPage.js'></script>
+</body>
+</html>
