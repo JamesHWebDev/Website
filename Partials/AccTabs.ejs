@@ -1,0 +1,64 @@
+<div id = "sections" class = "buttons">
+    <a href = '/account'>
+<button id = "accountInfo" class = "settings">Account</button>
+</a>
+<br>
+<a href = '/account/paymenthistory'>
+<button id = "paymentHistory" class = "settings" onclick = "payment()">Payments</button>
+<br>
+</a>
+<a href = '/account/purchases'>
+<button id = 'Bought' class = 'settings' onclick = 'Bought()'>Purchases</button>
+</a>
+<a href = '/account/withdraw'>
+<button id = "Withdraw" class = "settings" onclick = "Withdraw()">Withdraw</button>
+</a>
+<a href = '/account/SellersProfile'>
+<button id = 'SellerProfile' class = 'settings' onclick = 'SellerProfile()'>Sellers</button>
+</a>
+<a href = '/account/Display'>
+    <button id = 'Display' class = 'settings' onclick = 'Display()'>Display</button>
+    </a>
+<a href = '/account/logout'>
+<button id = 'LogOut' class = 'settings' onclick = 'LogOut()'>Logout</button>
+</a>
+
+<% if(User == 'SkullyFresh') {%>
+
+<a href = '/account/awpdijowofihweojfwoeugwoiejfklshfomevjdswldenfpa'>
+<button id = 'Orders' class = 'settings' onclick = 'LogOut()'>Orders</button>
+</a>
+
+<% } %>
+
+
+<% if(User == 'JamesHDev') {%>
+
+    <a href = '/account/alwioudhfbuefoipnawsedpoqawopidsdwdawdjkhwa'>
+    <button id = 'Reports' class = 'settings' onclick = 'LogOut()'>Reports</button>
+    </a>
+    
+    <% } %>
+
+
+    
+<% if(User == 'SoundMixerz') {%>
+
+    <a href = '/account/sdukfgsefopiwsyudopeduqweslkjfjhseuifphoisea'>
+    <button id = 'Email' class = 'settings' onclick = 'LogOut()'>Email</button>
+    </a>
+    
+    <% } %>
+
+    <% if(User == 'SoundMixerz' || User == 'JamesHDev' || User == 'SkullyFresh') {%>
+
+        <a href = '/account/klsddgfjksuFDKHGkjshdkjsFDRYWpljehbdwpeoriufjdks'>
+        <button id = 'Analytics' class = 'settings' onclick = 'LogOut()'>Analytics</button>
+        </a>
+        
+        <% } %>
+
+</div>
+
+
+

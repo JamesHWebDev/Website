@@ -1,0 +1,11 @@
+<% var NewNoti = 0 %>
+<% Noti.forEach(Noti => { %>
+    <% if(User == Noti.SellUser) { %>
+        <% NewNoti++ %>
+    <% } %>
+    <% }) %>
+    <% if(NewNoti > 0){ %>
+    <div class = 'NumNoti' id = 'NumNoti'>
+        <p><%= NewNoti %></p>
+    </div>
+    <% } %>
