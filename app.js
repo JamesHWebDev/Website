@@ -611,8 +611,8 @@ const storeItems = new Map([
 
     [25, { price: 50, name: 'SoundMixerz DrumKit Part 1' }],
 
-    [50, { price: `${process.env.BASIC_TEST_SUBSCRIPTION}`, name: 'Basic Subscription' }],
-    [51, { price: `${process.env.PRO_TEST_SUBSCRIPTION}`, name: 'Pro Subscription' }],
+    [50, { price: `${process.env.BASIC_SUBSCRIPTION}`, name: 'Basic Subscription' }],
+    [51, { price: `${process.env.PRO_SUBSCRIPTION}`, name: 'Pro Subscription' }],
 
     [999, { price: 0, name: 'PlaceHolder'}]//ID FOR BEATS
 ]);
