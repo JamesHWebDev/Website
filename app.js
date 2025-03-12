@@ -573,43 +573,43 @@ const storeItems = new Map([
 
 
 
-    [1, { price: 50, name: 'Autumn! FL Studio Vocal Preset' }],
-    [2, { price: 50, name: 'Autumn! Logic Pro X Vocal Preset' }],
+    [1, { price: 2000, name: 'Autumn! FL Studio Vocal Preset' }],
+    [2, { price: 2000, name: 'Autumn! Logic Pro X Vocal Preset' }],
 
-    [3, { price: 50, name: 'Destroy Lonely FL Studio Vocal Preset' }],
-    [4, { price: 50, name: 'Destroy Lonely Logic Pro X Vocal Preset' }],
+    [3, { price: 2000, name: 'Destroy Lonely FL Studio Vocal Preset' }],
+    [4, { price: 2000, name: 'Destroy Lonely Logic Pro X Vocal Preset' }],
 
-    [5, { price: 50, name: 'Ken Carson FL Studio Vocal Preset' }],
-    [6, { price: 50, name: 'Ken Carson Logic Pro X Vocal Preset' }],
+    [5, { price: 2000, name: 'Ken Carson FL Studio Vocal Preset' }],
+    [6, { price: 2000, name: 'Ken Carson Logic Pro X Vocal Preset' }],
 
-    [7, { price: 50, name: 'Tory Lanez FL Studio Vocal Preset' }],
-    [8, { price: 50, name: 'Tory Lanez Logic Pro X Vocal Preset' }],
+    [7, { price: 2000, name: 'Tory Lanez FL Studio Vocal Preset' }],
+    [8, { price: 2000, name: 'Tory Lanez Logic Pro X Vocal Preset' }],
 
-    [9, { price: 50, name: 'Frank Ocean FL Studio Vocal Preset' }],
-    [10, { price: 50, name: 'Frank Ocean Logic Pro X Vocal Preset' }],
+    [9, { price: 2000, name: 'Frank Ocean FL Studio Vocal Preset' }],
+    [10, { price: 2000, name: 'Frank Ocean Logic Pro X Vocal Preset' }],
 
-    [11, { price: 50, name: 'Don Toliver FL Studio Vocal Preset' }],
-    [12, { price: 50, name: 'Don Toliver Logic Pro X Vocal Preset' }],
+    [11, { price: 2000, name: 'Don Toliver FL Studio Vocal Preset' }],
+    [12, { price: 2000, name: 'Don Toliver Logic Pro X Vocal Preset' }],
 
-    [13, { price: 50, name: 'Bryson Tiller FL Studio Vocal Preset' }],
-    [14, { price: 50, name: 'Bryson Tiller Logic Pro X Vocal Preset' }],
+    [13, { price: 2000, name: 'Bryson Tiller FL Studio Vocal Preset' }],
+    [14, { price: 2000, name: 'Bryson Tiller Logic Pro X Vocal Preset' }],
 
-    [15, { price: 50, name: 'Travis Scott FL Studio Vocal Preset' }],
-    [16, { price: 50, name: 'Travis Scott Logic Pro X Vocal Preset' }],
+    [15, { price: 2000, name: 'Travis Scott FL Studio Vocal Preset' }],
+    [16, { price: 2000, name: 'Travis Scott Logic Pro X Vocal Preset' }],
 
-    [17, { price: 50, name: 'Lil Tjay FL Studio Vocal Preset' }],
-    [18, { price: 50, name: 'Lil Tjay Logic Pro X Vocal Preset' }],
+    [17, { price: 2000, name: 'Lil Tjay FL Studio Vocal Preset' }],
+    [18, { price: 2000, name: 'Lil Tjay Logic Pro X Vocal Preset' }],
 
-    [19, { price: 50, name: 'SoFaygo FL Studio Vocal Preset' }],
-    [20, { price: 50, name: 'SoFaygo Logic Pro X Vocal Preset' }],
+    [19, { price: 2000, name: 'SoFaygo FL Studio Vocal Preset' }],
+    [20, { price: 2000, name: 'SoFaygo Logic Pro X Vocal Preset' }],
 
-    [21, { price: 50, name: 'The Kid LAROI FL Studio Vocal Preset' }],
-    [22, { price: 50, name: 'The Kid LAROI Logic Pro X Vocal Preset' }],
+    [21, { price: 2000, name: 'The Kid LAROI FL Studio Vocal Preset' }],
+    [22, { price: 2000, name: 'The Kid LAROI Logic Pro X Vocal Preset' }],
 
-    [23, { price: 50, name: 'Lil Uzi Vert FL Studio Vocal Preset' }],
-    [24, { price: 50, name: 'Lil Uzi Vert Logic Pro X Vocal Preset' }],
+    [23, { price: 2000, name: 'Lil Uzi Vert FL Studio Vocal Preset' }],
+    [24, { price: 2000, name: 'Lil Uzi Vert Logic Pro X Vocal Preset' }],
 
-    [25, { price: 50, name: 'SoundMixerz DrumKit Part 1' }],
+    [25, { price: 2000, name: 'SoundMixerz DrumKit Part 1' }],
 
     [50, { price: `${process.env.BASIC_SUBSCRIPTION}`, name: 'Basic Subscription' }],
     [51, { price: `${process.env.PRO_SUBSCRIPTION}`, name: 'Pro Subscription' }],
@@ -8839,43 +8839,43 @@ const storeItems = new Map([
 
 
 
-    [1, { price: 50, name: 'Autumn! FL Studio Vocal Preset' }],
-    [2, { price: 50, name: 'Autumn! Logic Pro X Vocal Preset' }],
+    [1, { price: 2000, name: 'Autumn! FL Studio Vocal Preset' }],
+    [2, { price: 2000, name: 'Autumn! Logic Pro X Vocal Preset' }],
 
-    [3, { price: 50, name: 'Destroy Lonely FL Studio Vocal Preset' }],
-    [4, { price: 50, name: 'Destroy Lonely Logic Pro X Vocal Preset' }],
+    [3, { price: 2000, name: 'Destroy Lonely FL Studio Vocal Preset' }],
+    [4, { price: 2000, name: 'Destroy Lonely Logic Pro X Vocal Preset' }],
 
-    [5, { price: 50, name: 'Ken Carson FL Studio Vocal Preset' }],
-    [6, { price: 50, name: 'Ken Carson Logic Pro X Vocal Preset' }],
+    [5, { price: 2000, name: 'Ken Carson FL Studio Vocal Preset' }],
+    [6, { price: 2000, name: 'Ken Carson Logic Pro X Vocal Preset' }],
 
-    [7, { price: 50, name: 'Tory Lanez FL Studio Vocal Preset' }],
-    [8, { price: 50, name: 'Tory Lanez Logic Pro X Vocal Preset' }],
+    [7, { price: 2000, name: 'Tory Lanez FL Studio Vocal Preset' }],
+    [8, { price: 2000, name: 'Tory Lanez Logic Pro X Vocal Preset' }],
 
-    [9, { price: 50, name: 'Frank Ocean FL Studio Vocal Preset' }],
-    [10, { price: 50, name: 'Frank Ocean Logic Pro X Vocal Preset' }],
+    [9, { price: 2000, name: 'Frank Ocean FL Studio Vocal Preset' }],
+    [10, { price: 2000, name: 'Frank Ocean Logic Pro X Vocal Preset' }],
 
-    [11, { price: 50, name: 'Don Toliver FL Studio Vocal Preset' }],
-    [12, { price: 50, name: 'Don Toliver Logic Pro X Vocal Preset' }],
+    [11, { price: 2000, name: 'Don Toliver FL Studio Vocal Preset' }],
+    [12, { price: 2000, name: 'Don Toliver Logic Pro X Vocal Preset' }],
 
-    [13, { price: 50, name: 'Bryson Tiller FL Studio Vocal Preset' }],
-    [14, { price: 50, name: 'Bryson Tiller Logic Pro X Vocal Preset' }],
+    [13, { price: 2000, name: 'Bryson Tiller FL Studio Vocal Preset' }],
+    [14, { price: 2000, name: 'Bryson Tiller Logic Pro X Vocal Preset' }],
 
-    [15, { price: 50, name: 'Travis Scott FL Studio Vocal Preset' }],
-    [16, { price: 50, name: 'Travis Scott Logic Pro X Vocal Preset' }],
+    [15, { price: 2000, name: 'Travis Scott FL Studio Vocal Preset' }],
+    [16, { price: 2000, name: 'Travis Scott Logic Pro X Vocal Preset' }],
 
-    [17, { price: 50, name: 'Lil Tjay FL Studio Vocal Preset' }],
-    [18, { price: 50, name: 'Lil Tjay Logic Pro X Vocal Preset' }],
+    [17, { price: 2000, name: 'Lil Tjay FL Studio Vocal Preset' }],
+    [18, { price: 2000, name: 'Lil Tjay Logic Pro X Vocal Preset' }],
 
-    [19, { price: 50, name: 'SoFaygo FL Studio Vocal Preset' }],
-    [20, { price: 50, name: 'SoFaygo Logic Pro X Vocal Preset' }],
+    [19, { price: 2000, name: 'SoFaygo FL Studio Vocal Preset' }],
+    [20, { price: 2000, name: 'SoFaygo Logic Pro X Vocal Preset' }],
 
-    [21, { price: 50, name: 'The Kid LAROI FL Studio Vocal Preset' }],
-    [22, { price: 50, name: 'The Kid LAROI Logic Pro X Vocal Preset' }],
+    [21, { price: 2000, name: 'The Kid LAROI FL Studio Vocal Preset' }],
+    [22, { price: 2000, name: 'The Kid LAROI Logic Pro X Vocal Preset' }],
 
-    [23, { price: 50, name: 'Lil Uzi Vert FL Studio Vocal Preset' }],
-    [24, { price: 50, name: 'Lil Uzi Vert Logic Pro X Vocal Preset' }],
+    [23, { price: 2000, name: 'Lil Uzi Vert FL Studio Vocal Preset' }],
+    [24, { price: 2000, name: 'Lil Uzi Vert Logic Pro X Vocal Preset' }],
 
-    [25, { price: 50, name: 'SoundMixerz DrumKit Part 1' }],
+    [25, { price: 2000, name: 'SoundMixerz DrumKit Part 1' }],
 
     [50, { price: `${process.env.BASIC_TEST_SUBSCRIPTION}`, name: 'Basic Subscription' }],
     [51, { price: `${process.env.PRO_TEST_SUBSCRIPTION}`, name: 'Pro Subscription' }],
